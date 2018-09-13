@@ -1,5 +1,5 @@
-function fn(){
-console.log(1)
+let a = ()=>{
+  console.log(1)
 }
 
-export default fn
+export default a

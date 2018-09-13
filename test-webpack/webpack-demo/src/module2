@@ -1,6 +1,6 @@
-function fn(){
+let b = ()=>{
   console.log(2)
 
 }
 
-export default fn
+export default b
