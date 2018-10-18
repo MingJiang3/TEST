@@ -28,8 +28,8 @@ module.exports = {
   },
   // webpack lifecycle :before-complitaion run done =>
   plugins:[
-            new webpack.ProvidePlugin({
-                $: 'jquery'
+            new webpack.ProvidePlugin({//在webpack run阶段编译
+                $: 'jquery'     //变量指向xx模块，后面可以直接用
             }),
             new WebpackNotifierPlugin({
                 title: 'Webpack 编译成功',
@@ -41,7 +41,7 @@ module.exports = {
                 disable: false,
                 allChunks: true
             }),
-            new webpack.optimize.CommonsChunkPlugin({
+            new webpack.optimize.CommonsChunkPlugin({   //先引入common
                 name: 'common',
                 minChunks: Infinity
             })
